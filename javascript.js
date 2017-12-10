@@ -31,22 +31,54 @@ function getNewData(curDate){
 
 //Bij laden van document --> Datum van vandaag
 var curDate = new Date()
-getNewData(curDate=curDate);
+getNewData(curDate);
 
 
+var vandaag = new Date().toISOString().split('T')[0];
+
+
+function checkCurrentDate(HuidigeDatum){
+  HuidigeDatum = HuidigeDatum.toISOString().split('T')[0];
+  if (HuidigeDatum == vandaag){
+    $("#volgende").css("cursor", "not-allowed");
+    $("#volgende").css("background-color", "#7eaacf");
+    $("#volgende").attr('disabled', 'disabled');
+
+  }
+  else{
+    $("#volgende").css("cursor", "pointer");
+    $("#volgende").css("background-color", "#1a5fac");
+    $("#volgende").removeAttr("disabled")
+  }
+}
+
+//Laden van webpagina
 window.addEventListener("load", function(){
-
-  //Bij klikken op vorige
+  //bij het laden wordt gecontroleerd of je op "Volgende" mag klikken
+  checkCurrentDate(curDate)
+  
+  //  - Bij klikken op vorige
   document.getElementById("vorige").onclick = function(){
     // dag aftrekken van curdate:
     curDate.setDate(curDate.getDate() - 1);
     getNewData(curDate=curDate);
 
+    //Na een klik op vorige wordt gecontroleerd of je op "Volgende" mag klikken
+    checkCurrentDate(curDate)
   };
 
-  //Bij klikken op volgende
+  //  - Bij klikken op volgende
+  document.getElementById("volgende").onclick = function(){
+    // dag aftrekken van curdate:
+    curDate.setDate(curDate.getDate() + 1);
+    getNewData(curDate=curDate);
 
+    //Na een klik op volgende wordt gecontroleerd of je nogmaals op "Volgende" mag klikken
+    checkCurrentDate(curDate)
+    checkCurrentDate(curDate)
+  };
 
+  
 });
 
 
