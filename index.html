@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nasa</title>
+    <title>Nasa - Picture of The Day</title>
+    <link rel="shortcut icon" type="favicon/ico" href="Images/favicon.ico" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
     <script src="javascript.js"></script>
     <link rel="stylesheet" href="style/stylesheet.css">
@@ -25,19 +26,24 @@
     </div>
 
     <!-- API shit -->
-    <div class="center_wrapper">
-        <h3 id="API_Title"></h3>
-        <img id="API_img_id" width="250px"/>
-        <iframe id="API_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
+            <div class="container">
+            <div class="links">
+                <img id="API_img_id"/>
+                <iframe id="API_vid_id" type="text/html" frameborder="0"></iframe>            
+            </div>
+            
+            <div class="rechts">
+                <h3 id="API_Title"></h3>
+                <p id="Datum"></p>
 
-        <div class="Knoppen">
-            <button type="button" id="vorige" class="button regel"> &lt Vorige dag </button>
-            <button type="button" id="volgende" class="button regel"> Volgende dag &gt</button>
+                <p id="copyright"></p>
+                <p id="API_explaination"></p>
+                <div class="Knoppen">
+                        <button type="button" id="vorige" class="button regel"> &lt Previous day </button>
+                        <button type="button" id="volgende" class="button regel"> Next day &gt</button>
+                    </div>
+            </div>
         </div>
-
-        <p id="copyright"></p>
-        <p id="API_explaination"></p>
-    </div>
     <!-- ________________ -->
 </body>
 </html>

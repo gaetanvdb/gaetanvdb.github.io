@@ -11,6 +11,8 @@ function getNewData(curDate){
     else {
       $("#copyright").text("Image Credits: " + "Public Domain");
     }
+    //Datum opvullen
+    $("#Datum").text(curDate.toISOString().split('T')[0]);
 
     if(result.media_type == "video") {
       $("#API_vid_id").removeAttr("style")
