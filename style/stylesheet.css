@@ -64,7 +64,8 @@ header{
 
 .banner{
     width: 100%;
-    height: 400px;
+    height: calc(100vh - 101px);
+    /*height: 400px;*/
     background-image: url("../Images/Space.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -95,10 +96,10 @@ header{
     background-color: #1a5fac;
     border: none;
     color: white;
-    padding: 8px 16px;
+    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 12px;
     margin: auto;
     cursor: pointer;
     display: block;
@@ -110,7 +111,7 @@ header{
 }
 
 .regel{
-    width: 120px;
+    width: 150px;
     display: inline-block;
     margin: auto;
 }
@@ -122,13 +123,23 @@ header{
 
 /* --------- Links & Rechts --------- */
 .container {
-    display: inline-block;
     white-space: nowrap;
-    margin:0px auto;
+    margin: 0px auto;
     text-align: center;
+    height: 100vh;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .links, .rechts {
+    display: inline-block;
     margin: 30px auto 30px auto;
     width: 40%;
     display: inline-block;
@@ -140,11 +151,33 @@ header{
 }
 
 .links{
-    width:45%;  
-    overflow:hidden;
+    width:45%;
+    max-height: calc(100vh - 100px);  
+    overflow: hidden;
 }
 #API_vid_id{
     width: 90%;
     height: 400px;
 }
 /* ------------------------------- */
+
+/* ------------Contact------------ */
+.contact-wrapper{
+    background: #213344;
+    height: 100%;
+    width: 100%;
+}
+
+.contact-content{
+    padding-top: 20px;
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.contact-content h1{
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 200;
+    overflow: auto;
+}
