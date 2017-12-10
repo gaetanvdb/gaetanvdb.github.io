@@ -3,12 +3,12 @@
 html, body {
     margin: 0; 
     padding: 0;
-    background-color: #1d1d1d;
+    background-color: #0f1821;
     color: white;
   }
 
 header{
-    background-color: #0e0e0e;
+    background-color: #080d11;
     padding: 15px;
 }
 
@@ -41,7 +41,7 @@ header{
 }
 
 #API_Title{
-    font-size: 36px;
+    font-size: 24px;
     font-family: "Open Sans";
     font-weight: 400;
 }
@@ -54,7 +54,7 @@ header{
 
 .banner{
     width: 100%;
-    height: 300px;
+    height: 400px;
     background-image: url("../Images/Space.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -78,7 +78,7 @@ header{
     z-index: 3;
     overflow: auto;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 .button {
@@ -95,7 +95,7 @@ header{
 }
 
 /* ---- Picture of the day ---- */
-.PictureOfTheDay{
+.Knoppen{
     margin-top: 30px;
 }
 

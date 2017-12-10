@@ -11,12 +11,15 @@ function getNewData(curDate){
     else {
       $("#copyright").text("Image Credits: " + "Public Domain");
     }
-    
+
     if(result.media_type == "video") {
+      $("#API_vid_id").removeAttr("style")
       $("#API_img_id").css("display", "none"); 
       $("#API_vid_id").attr("src", result.url);
+      
     }
     else {
+      $("#API_img_id").removeAttr("style")
       $("#API_vid_id").css("display", "none"); 
       $("#API_img_id").attr("src", result.url);
     }
