@@ -162,11 +162,14 @@ header{
 }
 /* ------------------------------- */
 
-/* ------------Contact------------ */
+/* -----------------Contact----------------- */
 .contact-wrapper{
+    height: 100vh;
     background: #213344;
-    height: 100%;
     width: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .contact-content{
@@ -182,6 +185,54 @@ header{
     font-weight: 200;
     overflow: auto;
 }
+
+
+/* ------------Opmaak fomulier------------ */
+
+form {
+   max-width: 600px;
+   text-align: center;
+   margin: 20px auto;
+}
+
+input, textarea {
+    border:0; outline:0;
+    padding: 1em;
+    border-radius:(8px);
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    font-family: "Open Sans";
+    box-shadow:(0 1px 1px rgba(black, 0.1));
+    resize: none;
+}
+  
+#input-submit {
+    color: white; 
+    background: #1a5fac;
+    cursor: pointer;
+}
+  
+textarea {
+    height: 110px;
+}
+
+.half {
+    float: left;
+    width: 48%;
+    margin-bottom: 1em;
+}
+
+.right {
+    width: 43%;
+}
+
+.left {
+     margin-right: 5%; 
+}
+/* ------------------------------- */
+/* ----------------------------------------- */
+
 
 
 /* MOBIELE VERSIE */
@@ -207,7 +258,7 @@ header{
         max-height: 300px;
         width: auto;
     }
-    
+
     #API_vid_id{
         max-height: 300px;
         width: calc(100vw / 1.2);
