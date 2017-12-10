@@ -62,26 +62,51 @@ window.addEventListener("load", function(){
   //bij het laden wordt gecontroleerd of je op "Volgende" mag klikken
   checkCurrentDate(curDate)
   
-  //  - Bij klikken op vorige
-  document.getElementById("vorige").onclick = function(){
+  function klikVorige(){
     // dag aftrekken van curdate:
     curDate.setDate(curDate.getDate() - 1);
     getNewData(curDate=curDate);
-
     //Na een klik op vorige wordt gecontroleerd of je op "Volgende" mag klikken
     checkCurrentDate(curDate)
+  }
+
+  function klikVolgende(){
+    // dag aftrekken van curdate:
+    curDate.setDate(curDate.getDate() + 1);
+    getNewData(curDate=curDate);
+    //Na een klik op volgende wordt gecontroleerd of je nogmaals op "Volgende" mag klikken
+    checkCurrentDate(curDate)
+  }
+
+  // --- BIJ KLIKKEN OP KNOPPEN ---
+  //  - Bij klikken op vorige
+  document.getElementById("vorige").onclick = function(){
+    klikVorige()
   };
 
   //  - Bij klikken op volgende
   document.getElementById("volgende").onclick = function(){
-    // dag aftrekken van curdate:
-    curDate.setDate(curDate.getDate() + 1);
-    getNewData(curDate=curDate);
-
-    //Na een klik op volgende wordt gecontroleerd of je nogmaals op "Volgende" mag klikken
-    checkCurrentDate(curDate)
-    checkCurrentDate(curDate)
+    klikVolgende();
   };
+
+  // --- BIJ GEBRUIKEN VAN PIJLEN ---
+  document.onkeydown = checkKey;
+  
+  function checkKey(e) {
+      e = e || window.event;
+  
+     if (e.keyCode == '37') {
+         klikVorige()
+         console.log("VANDAAG: " + vandaag)
+         console.log("CUR: " + curDate)
+      }
+      else if ((e.keyCode == '39') && (vandaag != curDate.toISOString().split('T')[0])){
+         klikVolgende()
+      }
+      else if ((e.keyCode == '39') && (vandaag == curDate.toISOString().split('T')[0])){
+        
+     }
+  }
 
   
 });
