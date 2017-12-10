@@ -15,7 +15,7 @@
         <div class="center_wrapper header_wrapper">
         <p class="Menu_Item eerst"> <a href="#container">Picture of the day</a> </p>
         <img class="logo" src="Images/Logo.png" alt="Nasa Logo" >
-        <p class="Menu_Item tweede"> Contact</p>
+        <p class="Menu_Item tweede"> <a href="#contact-wrapper">Contact</a></p>
         </div> 
     </header>
 
@@ -49,15 +49,15 @@
 
 
     <!-- contact formulier -->
-    <div class="contact-wrapper">
+    <div class="contact-wrapper" id="contact-wrapper">
         <div class="contact-content">
             <h1>Get in Touch</h1>
 
-            
+
             <form class="cf">
               <div class="half left cf">
                 <input type="text" id="input-name" placeholder="Name">
-                <input type="email" id="input-email" placeholder="Email address">
+                <input type="email" id="input-email" placeholder="Email">
                 <input type="text" id="input-subject" placeholder="Subject">
               </div>
               <div class="half right cf">
@@ -75,5 +75,6 @@
 </body>
 <script>
         var scroll = new SmoothScroll('a[href*="#container"]');
+        var scroll = new SmoothScroll('a[href*="#contact-wrapper"]');
     </script>
 </html>
