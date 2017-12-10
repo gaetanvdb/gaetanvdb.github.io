@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nasa</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
+    <script src="javascript.js"></script>
+    <link rel="stylesheet" href="style/stylesheet.css">
+</head>
+<body>
+
+    <header>
+        <div class="center_wrapper header_wrapper">
+        <p class="Menu_Item eerst"> Picture of the day </p>
+        <img class="logo" src="Images/Logo.png" alt="Nasa Logo" >
+        <p class="Menu_Item tweede"> Contact</p>
+        </div> 
+    </header>
+
+    <div class="banner">
+        <div class="kleur">
+                <h1>Astronomy Picture of the Day</h1>
+                <button class="button">View Picture of the day</button>
+        </div>
+    </div>
+
+    <div class="center_wrapper">
+        <div class="PictureOfTheDay">
+            <div class="Knoppen">
+                <button id="vorige" class="button regel"> &lt Vorige dag </button>
+                <button id="volgende" class="button regel"> Volgende dag &gt </button>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- API shit -->
+    <div class="center_wrapper">
+        <h3 id="API_Title"></h3>
+        <img id="API_img_id" width="250px"/>
+        <iframe id="API_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
+        <p id="copyright"></p>
+        <p id="API_explaination"></p>
+    </div>
+    <!-- ________________ -->
+</body>
+</html>
