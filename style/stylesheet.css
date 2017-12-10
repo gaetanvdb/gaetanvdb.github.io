@@ -10,6 +10,9 @@ a {
     color: inherit; /* blue colors for links too */
     text-decoration: inherit; /* no underline */
 }
+p{
+    font-family: "Open Sans"; 
+}
 
 header{
     background-color: #080d11;
@@ -143,12 +146,9 @@ header{
     display: inline-block;
     margin: 30px auto 30px auto;
     width: 40%;
-    display: inline-block;
     white-space: normal;
     vertical-align: middle;
     text-align:center;
-
-    font: 12px/1.5 Arial, sans-serif;
 }
 
 .links{
@@ -181,4 +181,35 @@ header{
     font-size: 24px;
     font-weight: 200;
     overflow: auto;
+}
+
+
+/* MOBIELE VERSIE */
+@media screen and (max-width: 800px) {
+    .container{
+        all: initial;
+        width: 75%;
+        margin: 0px auto;
+        text-align: center;
+        padding: 50px;
+    }
+
+    .links, .rechts{
+        all: initial;
+        display: block;
+        margin: 0px auto;
+        text-align: center;
+        color: white;
+        width: 75%;
+    }
+
+    #API_img_id{
+        max-height: 300px;
+        width: auto;
+    }
+    
+    #API_vid_id{
+        max-height: 300px;
+        width: calc(100vw / 1.2);
+    }
 }
