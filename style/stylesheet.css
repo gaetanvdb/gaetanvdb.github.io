@@ -89,7 +89,7 @@ header{
     z-index: 3;
     overflow: auto;
     text-align: center;
-    padding-top: 150px;
+    padding-top: calc((100vh - 101px)/2.5);
 }
 
 .button {
