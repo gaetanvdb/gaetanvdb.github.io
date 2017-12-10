@@ -6,13 +6,14 @@
     <link rel="shortcut icon" type="favicon/ico" href="Images/favicon.ico" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
     <script src="javascript.js"></script>
+    <script src="smooth-scroll.js"></script>
     <link rel="stylesheet" href="style/stylesheet.css">
 </head>
 <body>
 
     <header>
         <div class="center_wrapper header_wrapper">
-        <p class="Menu_Item eerst"> Picture of the day </p>
+        <p class="Menu_Item eerst"> <a href="#container">Picture of the day</a> </p>
         <img class="logo" src="Images/Logo.png" alt="Nasa Logo" >
         <p class="Menu_Item tweede"> Contact</p>
         </div> 
@@ -21,12 +22,12 @@
     <div class="banner">
         <div class="kleur">
                 <h1>Astronomy Picture of the Day</h1>
-                <button class="button">View Picture of the day</button>
+                <a href="#container"><button class="button">View Picture of the day</button></a>
         </div>
     </div>
 
     <!-- API shit -->
-            <div class="container">
+            <div class="container" id="container">
             <div class="links">
                 <img id="API_img_id"/>
                 <iframe id="API_vid_id" type="text/html" frameborder="0"></iframe>            
@@ -46,4 +47,7 @@
         </div>
     <!-- ________________ -->
 </body>
+<script>
+        var scroll = new SmoothScroll('a[href*="#container"]');
+    </script>
 </html>
