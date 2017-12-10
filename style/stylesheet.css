@@ -90,6 +90,7 @@ header{
     overflow: auto;
     text-align: center;
     padding-top: calc((100vh - 101px)/2.5);
+    overflow: hidden;
 }
 
 .button {
